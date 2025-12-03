@@ -1,0 +1,8 @@
+streamlit
+moviepy==1.0.3
+edge-tts
+langchain-groq
+requests
+python-dotenv
+imageio-ffmpeg
+playwright
