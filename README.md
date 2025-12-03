@@ -59,31 +59,50 @@ Linux: sudo apt install imagemagick
 
 Chrome/Firefox installed
 
-Installation
-Clone the repository
-git clone [https://github.com/yourusername/AutoTok.git](https://github.com/yourusername/AutoTok.git)
-cd AutoTok
-Install dependencies
-pip install -r requirements.txt
-playwright install
-Configuration Create a .env file in the root directory:
-GROQ_API_KEY=your_groq_key
-PEXELS_API_KEY=your_pexels_key
-Usage
-1. Login to TikTok (One-time Setup)
-Run the login script to authenticate and save your session cookies (auth.json).
+Markdown
+
+### Installation
+
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/yourusername/AutoTok.git](https://github.com/yourusername/AutoTok.git)
+    cd AutoTok
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    pip install -r requirements.txt
+    playwright install
+    ```
+
+3.  **Configuration**
+    Create a `.env` file in the root directory:
+    ```env
+    GROQ_API_KEY=your_groq_key
+    PEXELS_API_KEY=your_pexels_key
+    ```
+
+## Usage
+
+#### 1. Login to TikTok (One-time Setup)
+Run the login script to authenticate and save your session cookies (`auth.json`).
+```bash
 python login.py
 Follow the on-screen instructions to log in manually via QR code.
+
 2. Run the Generator
 Launch the web interface to generate and upload videos.
+
+Bash
+
 streamlit run app.py
 🧩 Challenges & Solutions
 Asset Duration Mismatch: Pexels videos are often shorter than the generated audio.
+
 Solution: Implemented a logic in video_engine.py to calculate n_loops and seamlessly loop the background video to match the exact duration of the narration.
 
 Bot Detection: TikTok blocks standard Selenium/Puppeteer scripts.
 
 Solution: Used Playwright with custom user-agent injection and storage_state persistence to mimic a real user session, effectively bypassing login CAPTCHAs.
-
 📄 License
 Distributed under the MIT License.
