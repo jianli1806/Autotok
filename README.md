@@ -59,7 +59,6 @@ Linux: sudo apt install imagemagick
 
 Chrome/Firefox installed
 
-Markdown
 
 ### Installation
 
@@ -90,12 +89,12 @@ Run the login script to authenticate and save your session cookies (`auth.json`)
 python login.py
 Follow the on-screen instructions to log in manually via QR code.
 
-2. Run the Generator
+#### 2. Run the Generator
 Launch the web interface to generate and upload videos.
 
-Bash
-
+```bash
 streamlit run app.py
+```
 🧩 Challenges & Solutions
 Asset Duration Mismatch: Pexels videos are often shorter than the generated audio.
 
