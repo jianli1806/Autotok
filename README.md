@@ -9,7 +9,6 @@
 
 Unlike simple video editors, this system functions as a **code-first content factory**: it orchestrates LLMs for scripting, Neural TTS for narration, and programmatic video editing for composition, finally automating the distribution process via browser simulation.
 
-🔗 **[Live Demo](https://your-app-url.streamlit.app)** *(Optional: Add link if deployed, otherwise remove)*
 
 ## 🚀 Key Features
 
@@ -87,14 +86,17 @@ Chrome/Firefox installed
 Run the login script to authenticate and save your session cookies (`auth.json`).
 ```bash
 python login.py
+```
+
 Follow the on-screen instructions to log in manually via QR code.
 
-#### 2. Run the Generator
+2. Run the Generator
 Launch the web interface to generate and upload videos.
 
 ```bash
 streamlit run app.py
 ```
+
 🧩 Challenges & Solutions
 Asset Duration Mismatch: Pexels videos are often shorter than the generated audio.
 
